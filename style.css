@@ -1,0 +1,201 @@
+/* ----------------------------------------------------
+   [1] المتغيرات العالمية (CSS Variables)
+   تسمح بتعديل الألوان والخطوط بسهولة من مكان واحد.
+   ---------------------------------------------------- */
+:root {
+    /* الألوان الأساسية */
+    --main-bg-color: #f7f7f7;        /* الخلفية الفاتحة */
+    --text-color: #1a1a1a;           /* لون النص الرئيسي الداكن */
+    --primary-color: #007bff;        /* لون التمييز الأزرق */
+    --primary-hover-color: #0056b3;  /* لون التمييز عند التمرير */
+    
+    /* تنسيق الأزرار */
+    --button-bg: #ffffff;            /* خلفية الأزرار البيضاء */
+    --button-text: #1a1a1a;          /* لون نص الأزرار */
+    --border-radius: 12px;           /* زوايا الأزرار المستديرة */
+
+    /* أيقونات التواصل الاجتماعي */
+    --social-icon-color: #4a4a4a;    /* لون الأيقونات */
+    --social-icon-hover: var(--primary-color);
+    --social-gap: 25px;              /* المسافة المنسقة بين الأيقونات */
+}
+
+
+/* ----------------------------------------------------
+   [2] التنسيقات العامة (Reset & Typography)
+   ---------------------------------------------------- */
+* {
+    box-sizing: border-box; /* لضمان أن العرض والارتفاع يشملان الحشو والإطار */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: right; /* دعم كامل للغة العربية */
+    min-height: 100vh; /* لضمان أن الجسم يغطي كامل الارتفاع */
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------------------------------------
+   [3] الحاوية الرئيسية والتمركز
+   ---------------------------------------------------- */
+.container {
+    max-width: 600px; 
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+
+/* ----------------------------------------------------
+   [4] رأس الصفحة والملف الشخصي
+   ---------------------------------------------------- */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* جعل الصورة دائرية بالكامل كما طلبت */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--primary-color); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.bio {
+    font-size: 1rem;
+    color: #6c757d;
+    max-width: 450px;
+    margin: 0 auto 20px auto; /* مسافة سفلية قبل الأيقونات */
+}
+
+
+/* ----------------------------------------------------
+   [5] أيقونات التواصل الاجتماعي (مسافات منسقة)
+   ---------------------------------------------------- */
+.social-icons {
+    margin-bottom: 30px; 
+    display: flex;
+    justify-content: center; /* توسيط الأيقونات */
+    gap: var(--social-gap); /* المسافة المنسقة والمحددة في المتغيرات */
+}
+
+.social-icons a {
+    color: var(--social-icon-color);
+    font-size: 1.8rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-icons a:hover {
+    color: var(--social-icon-hover);
+    transform: scale(1.1);
+}
+
+
+/* ----------------------------------------------------
+   [6] قسم الروابط (الأزرار)
+   ---------------------------------------------------- */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.link-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: var(--border-radius);
+    border: 1px solid #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.link-btn:hover {
+    transform: translateY(-3px); /* تأثير الرفع الجذاب */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* زر التمييز (الرئيسي) */
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+
+/* ----------------------------------------------------
+   [7] التذييل (Footer) وحقوق الطبع
+   ---------------------------------------------------- */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 20px; /* مسافة إضافية أسفل الصفحة */
+}
+
+.footer p {
+    font-size: 0.8rem;
+    color: #999;
+}
+.kiro {
+    margin-bottom: 30px; 
+    display: flex;
+    justify-content: center; /* توسيط الأيقونات */
+    gap: var(--social-gap); /* المسافة المنسقة والمحددة في المتغيرات */
+    
+}
+
+.kiro a {
+    color: var(--social-icon-color);
+    font-size: 0.8rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.kiro a:hover {
+    color: var(--social-icon-hover);
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------------
+   [8] استجابة التصميم (Media Queries)
+   ---------------------------------------------------- */
+@media (max-width: 480px) {
+    /* تنسيقات خاصة للهواتف الصغيرة */
+    .container {
+        margin: 20px auto;
+    }
+
+    .link-btn {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        gap: 18px; /* تقليل المسافة بين الأيقونات قليلاً على شاشات الهواتف */
+    }
+}
