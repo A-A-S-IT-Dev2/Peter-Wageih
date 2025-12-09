@@ -80,8 +80,8 @@ body {
 .bio {
     font-size: 1rem;
     color: #6c757d;
-    max-width: 450px;
-    margin: 0 auto 20px auto; /* مسافة سفلية قبل الأيقونات */
+    max-width: 400px;
+    margin: 0 auto 15px auto; /* مسافة سفلية قبل الأيقونات */
 }
 
 
@@ -198,4 +198,5 @@ body {
     .social-icons {
         gap: 18px; /* تقليل المسافة بين الأيقونات قليلاً على شاشات الهواتف */
     }
+
 }
